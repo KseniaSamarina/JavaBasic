@@ -9,9 +9,9 @@ public class Calculator {
         while (true) {
             try {
                 System.out.println("Пожалуйста, введите первое число");
-                float x = console.nextInt();
+                float x = console.nextFloat();
                 System.out.println("Пожалуйста, введите второе число");
-                float y = console.nextInt();
+                float y = console.nextFloat();
                 System.out.println("Пожалуйста, введите символ арифметической операции");
                 char z = console.next().charAt(0);
 
