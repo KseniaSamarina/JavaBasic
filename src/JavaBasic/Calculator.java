@@ -9,9 +9,9 @@ public class Calculator {
         while (true) {
             try {
                 System.out.println("Пожалуйста, введите первое число");
-                int x = console.nextInt();
+                float x = console.nextInt();
                 System.out.println("Пожалуйста, введите второе число");
-                int y = console.nextInt();
+                float y = console.nextInt();
                 System.out.println("Пожалуйста, введите символ арифметической операции");
                 char z = console.next().charAt(0);
 
@@ -22,7 +22,7 @@ public class Calculator {
                 } else if (z == '*') {
                     System.out.println("Произведение = " + (x * y));
                 } else if (z == '/') {
-                    System.out.println("Частное от деления = " + (x / y));
+                    System.out.println("Частное от деления = " + (float)(x / y));
                 } else {
                     System.out.println("Введён несуществующий символ");
                 }
