@@ -1,6 +1,5 @@
 package JavaBasic;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Riddle {
