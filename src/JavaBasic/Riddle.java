@@ -6,40 +6,40 @@ import java.util.Scanner;
 public class Riddle {
     public static void main(String[] args) {
         String answer;
-        System.out.println("Отгадайте загадку:");
-        System.out.println("Сидит дед, во сто шуб одет, кто его раздевает, тот слезы проливает");
+        System.out.println("РћС‚РіР°РґР°Р№С‚Рµ Р·Р°РіР°РґРєСѓ:");
+        System.out.println("РЎРёРґРёС‚ РґРµРґ, РІРѕ СЃС‚Рѕ С€СѓР± РѕРґРµС‚, РєС‚Рѕ РµРіРѕ СЂР°Р·РґРµРІР°РµС‚, С‚РѕС‚ СЃР»РµР·С‹ РїСЂРѕР»РёРІР°РµС‚");
         Scanner inputAnswer = new Scanner(System.in);
 
         int attemptsCount = 3;
         boolean hintUsed = false;
 
         do {
-            System.out.println("Попыток - " + attemptsCount);
-            System.out.println("Введи ответ:");
+            System.out.println("РџРѕРїС‹С‚РѕРє - " + attemptsCount);
+            System.out.println("Р’РІРµРґРё РѕС‚РІРµС‚:");
             answer = inputAnswer.nextLine();
             switch (answer) {
-                case ("Заархивированный вирус") -> {
-                    System.out.println("Правильно!");
+                case ("Р—Р°Р°СЂС…РёРІРёСЂРѕРІР°РЅРЅС‹Р№ РІРёСЂСѓСЃ") -> {
+                    System.out.println("РџСЂР°РІРёР»СЊРЅРѕ!");
                     attemptsCount = 0;
                 }
-                case ("Подсказка") -> {
+                case ("РџРѕРґСЃРєР°Р·РєР°") -> {
                     if (attemptsCount == 3 && !hintUsed) {
-                        System.out.println("Это точно не лук! Подумай ещё");
+                        System.out.println("Р­С‚Рѕ С‚РѕС‡РЅРѕ РЅРµ Р»СѓРє! РџРѕРґСѓРјР°Р№ РµС‰С‘");
                         attemptsCount = 1;
                     } else {
-                        System.out.println("Подсказка уже недоступна");
+                        System.out.println("РџРѕРґСЃРєР°Р·РєР° СѓР¶Рµ РЅРµРґРѕСЃС‚СѓРїРЅР°");
                     }
                     hintUsed = true;
                 }
                 default -> {
                     if (attemptsCount > 1) {
-                        System.out.println("Подумай еще");
+                        System.out.println("РџРѕРґСѓРјР°Р№ РµС‰Рµ");
                     }
                     attemptsCount--;
                 }
             }
         }
         while (attemptsCount > 0);
-        System.out.println("Обидно, приходи в другой раз");
+        System.out.println("РћР±РёРґРЅРѕ, РїСЂРёС…РѕРґРё РІ РґСЂСѓРіРѕР№ СЂР°Р·");
     }
 }
